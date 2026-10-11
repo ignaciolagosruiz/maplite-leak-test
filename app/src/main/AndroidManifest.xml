@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET" />
     <application android:label="MapLeak test" android:allowBackup="false">
-        <!-- No API key on purpose: tiles won't load, but MapView creation/teardown is identical -->
+        <!-- Placeholder key: the SDK requires one to create a MapView. Tiles won't load (auth fails),
+             but MapView creation and teardown are the same code path as in uTag. -->
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyPLACEHOLDER-not-a-real-key-000000" />
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

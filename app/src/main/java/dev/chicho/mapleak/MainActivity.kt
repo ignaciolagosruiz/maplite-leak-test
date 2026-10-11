@@ -44,6 +44,7 @@ class MainActivity : Activity() {
                         applicationContext.renderCurrentUtag(600, 400, padding, markers)
                     }
                 } catch (e: Exception) {
+                    if (failed < 3) Log.w("MAPLEAK", "render $i failed: $e")
                     null
                 }
                 if (bitmap != null) ok++ else failed++
