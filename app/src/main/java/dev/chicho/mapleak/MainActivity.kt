@@ -39,7 +39,7 @@ class MainActivity : Activity() {
             for (i in 1..count) {
                 val bitmap = try {
                     if (mode == "reuse") {
-                        ReusedMapRenderer.render(applicationContext, 600, 400, padding, markers)
+                        applicationContext.generateGoogleMapReused(600, 400, padding, markers = { markers(this) })
                     } else {
                         applicationContext.renderCurrentUtag(600, 400, padding, markers)
                     }
